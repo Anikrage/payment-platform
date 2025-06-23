@@ -1,0 +1,21 @@
+spring:
+  kafka:
+    consumer:
+      group-id: transaction-service-group
+  datasource:
+    url: jdbc:postgresql://localhost:5432/paymentdb
+    username: paymentuser
+    password: securepass
+    driver-class-name: org.postgresql.Driver
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info
+  endpoint:
+    health:
+      show-details: always
+
+
+server:
+  port: 8084

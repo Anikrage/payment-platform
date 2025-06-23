@@ -1,0 +1,30 @@
+spring:
+  kafka:
+    consumer:
+      group-id: transaction-service-group  # Add this line
+    bootstrap-servers: localhost:9092
+    properties:
+      spring.json.trusted.packages: "com.payment.shared.events"
+  redis:
+    host: localhost
+    port: 6379
+  cache:
+    type: redis
+    redis:
+      time-to-live: 600000 # 10 minutes
+  datasource:
+    url: jdbc:postgresql://localhost:5432/paymentdb
+    username: paymentuser
+    password: securepass
+    driver-class-name: org.postgresql.Driver
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info
+  endpoint:
+    health:
+      show-details: always
+
+server:
+  port: 8083
