@@ -16,5 +16,7 @@ com/payment/processor/statemachine/PaymentEvent.class
 com/payment/processor/model/RefundRequest.class
 com/payment/processor/gateway/impl/UPIGatewayImpl.class
 com/payment/processor/model/PaymentRequest.class
+com/payment/processor/repository/PaymentRepository.class
 com/payment/processor/kafka/PaymentEventProducer.class
+com/payment/processor/model/Payment.class
 com/payment/processor/service/PaymentService.class

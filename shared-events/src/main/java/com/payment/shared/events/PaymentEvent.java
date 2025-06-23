@@ -6,7 +6,7 @@ import java.time.Instant;
 public class PaymentEvent {
     private String transactionId;
     private String userId;
-    private BigDecimal amount;
+    private BigDecimal amount;  // Field type is BigDecimal
     private String currency;
     private String status;
     private String paymentMethod;
@@ -31,8 +31,13 @@ public class PaymentEvent {
     public String getUserId() { return userId; }
     public void setUserId(String userId) { this.userId = userId; }
     
-    public BigDecimal getAmount() { return amount; }
-    public void setAmount(BigDecimal amount) { this.amount = amount; }
+    public BigDecimal getAmount() { 
+        return amount; 
+    }
+
+    public void setAmount(BigDecimal amount) { 
+        this.amount = amount; 
+    }    
     
     public String getCurrency() { return currency; }
     public void setCurrency(String currency) { this.currency = currency; }

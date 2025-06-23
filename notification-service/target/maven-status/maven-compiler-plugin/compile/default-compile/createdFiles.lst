@@ -1,2 +1,5 @@
-com/payment/notification/NotificationServiceApplication.class
+com/payment/notification/repository/NotificationRepository.class
 com/payment/notification/controller/HealthController.class
+com/payment/notification/controller/NotificationController.class
+com/payment/notification/NotificationServiceApplication.class
+com/payment/notification/model/Notification.class

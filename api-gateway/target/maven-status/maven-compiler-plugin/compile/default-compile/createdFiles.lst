@@ -1,1 +1,2 @@
 com/payment/gateway/ApiGatewayApplication.class
+com/payment/gateway/config/CorsConfig.class

@@ -1,5 +1,6 @@
 package com.payment.transaction.service.impl;
 
+import java.time.Instant;
 import java.util.List;
 import java.util.Optional;
 
@@ -14,12 +15,8 @@ import com.payment.transaction.service.TransactionService;
 @Service
 public class TransactionServiceImpl implements TransactionService {
 
-    private final TransactionRepository transactionRepository;
-
     @Autowired
-    public TransactionServiceImpl(TransactionRepository transactionRepository) {
-        this.transactionRepository = transactionRepository;
-    }
+    private TransactionRepository transactionRepository;
 
     @Override
     public Optional<Transaction> getTransactionById(String transactionId) {
@@ -37,10 +34,10 @@ public class TransactionServiceImpl implements TransactionService {
         transaction.setId(event.getTransactionId());
         transaction.setUserId(event.getUserId());
         transaction.setAmount(event.getAmount());
-        transaction.setCurrency(event.getCurrency());
-        transaction.setStatus(event.getStatus());
+        transaction.setStatus("SUCCESS");
         transaction.setPaymentMethod(event.getPaymentMethod());
-        transaction.setCreatedAt(java.time.Instant.now());
+        transaction.setCreatedAt(Instant.now());
+        
         transactionRepository.save(transaction);
     }
 }
