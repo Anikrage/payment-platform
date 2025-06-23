@@ -36,12 +36,6 @@ This project is a microservice-based payment processing system built with Spring
 - Docker
 - Kubernetes (Minikube or Docker Desktop)
 
-### 📦 Build All Services
-
-```bash
-cd payment-platform
-mvn clean install
-
 ✍️ Author
 
 Anik Halder
